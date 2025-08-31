@@ -1,9 +1,13 @@
-
+'use client'
 import Header from "@/component/Header";
 import Sidebar from "@/component/Sidebar";
 import Toolbar from "@/component/Toolbar";
 import TableList from "@/component/TableList";
+import { useSelector } from "react-redux";
 export default function Home({ children }) {
+
+  const mockData = useSelector((state)=>state.tableData)
+
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
@@ -19,7 +23,7 @@ export default function Home({ children }) {
           {/* Toolbar */}
           <Toolbar/>
           {/* Inbox List */}
-          <TableList/>
+          <TableList datasource={mockData}/>
         </main>
       </div>
     </div>
