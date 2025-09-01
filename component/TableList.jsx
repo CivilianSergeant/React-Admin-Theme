@@ -10,7 +10,7 @@ export default function TableList({datasource}) {
       {/* Row 1 - Unread */}
       {
         datasource.map(data=>{
-          return (<TableListItem item={data} contextVisible={false}/>)
+          return (<TableListItem key={data.id} item={data} contextVisible={false}/>)
         })
       }
       
