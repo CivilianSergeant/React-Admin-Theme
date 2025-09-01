@@ -69,9 +69,9 @@ export default function Sidebar() {
     })
   }
   return (
-    <aside className="bg-white h-screen shadow flex flex-col w-64">
+    <aside className="bg-white h-screen flex flex-col w-64 border-r border-gray-200">
       {/* <!-- Top logo --> */}
-      <div className="flex items-center justify-center h-16  shadow  ">
+      <div className="flex items-center justify-center h-16 shadow-sm  ">
         Logo
       </div>
 

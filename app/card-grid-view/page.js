@@ -1,14 +1,20 @@
-"use client"
-import React, { useState } from "react"
+
+
 import Header from "@/component/Header";
 import Sidebar from "@/component/Sidebar";
 import CardGridView from "@/component/CardGridView";
-import { useSelector } from "react-redux";
-export default function Home({ children }) {
+
+export default async function Home({ children }) {
 
 
-  const data = useSelector(state=>state.tableData)
+  async function getData(){
+    const response = await fetch('http://localhost:8080/panac/fruits');
+    const fruits = await response.json();
+    console.log(fruits)
+    return fruits;
+  }
   
+  const data = await getData();
 
 
   return (
