@@ -9,7 +9,7 @@ export default function TableList({datasource}) {
     <div className="bg-white shadow rounded-lg divide-y">
       {/* Row 1 - Unread */}
       {
-        datasource.map(data=>{
+        datasource.items.map(data=>{
           return (<TableListItem key={data.id} item={data} contextVisible={false}/>)
         })
       }

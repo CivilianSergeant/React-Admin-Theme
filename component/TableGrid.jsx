@@ -7,7 +7,7 @@ export default function TableGrid({ datasource }) {
     const [sortOrder, setSortOrder] = useState("asc")
     const [page, setPage] = useState(1)
     const pageSize = 15
-    const filtered = datasource
+    const filtered = datasource.items
         .filter(
             (item) =>
                 item.name.toLowerCase().includes(search.toLowerCase()) ||
