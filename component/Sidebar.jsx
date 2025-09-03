@@ -27,7 +27,8 @@ export default function Sidebar() {
       id: 9, route: '#', name: 'UI', icon: 'settings', children: [
         { id: 10, route: '/table-list-view', name: 'Table List View', children: [] },
         { id: 11, route: '/table-grid-view', name: 'Table Grid View', children: [] },
-        { id: 12, route: '/card-grid-view', name: 'Card Grid View', children: [] }
+        { id: 12, route: '/card-grid-view', name: 'Card Grid View', children: [] },
+        { id: 13, route: '/form', name: 'Form View', children: [] }
       ]
     }
   ]
