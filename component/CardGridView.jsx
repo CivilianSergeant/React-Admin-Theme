@@ -26,13 +26,13 @@ export default function CardGridView({ datasource }) {
   if(!loaded){
     return <Loader/>
   }
-  if (loaded && items.length === 0) {
+  if (loaded &&  items?.length === 0) {
     return <p className="text-center text-gray-500">No cards found.</p>;
   }
   return (
     <div className="p-6  min-h-screen">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
-        {items.map((item) => (
+        {items?.map((item) => (
           <BasicCard key={item.id} item={item} />
         ))}
       </div>

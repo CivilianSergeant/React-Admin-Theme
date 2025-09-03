@@ -8,10 +8,14 @@ export default async function Home({ children }) {
 
 
   async function getData(){
+    try{
     const response = await fetch('http://localhost:8080/panac/fruits');
     const fruits = await response.json();
     console.log(fruits)
     return fruits;
+    }catch(e){
+      console.log(e)
+    }
   }
   
   const data = await getData();
